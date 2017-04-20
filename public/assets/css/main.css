@@ -237,6 +237,26 @@ body, html {
   flex-direction: column;
   text-align: right; }
 
+/*
+    MAP CSS
+*/
+.mapContainer {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 0 auto; }
+
+.holeSelectorRow {
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 100px;
+  padding-top: 5px;
+  justify-content: center; }
+
 @media (min-width: 1165px) {
   body, html {
     height: 100vh;

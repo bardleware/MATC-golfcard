@@ -1,5 +1,4 @@
-angular.module('appRoutes', ['ui.router'])
-  .config(function ($stateProvider, $locationProvider,$urlRouterProvider) {
+app.config(function ($stateProvider, $locationProvider,$urlRouterProvider) {
 
     //function to create route 'table'
     function createState(item) {

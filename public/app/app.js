@@ -1,1 +1,1 @@
-angular.module('userApp',['appRoutes','userControllers'])
+var app = angular.module('golf0',['ui.router']);

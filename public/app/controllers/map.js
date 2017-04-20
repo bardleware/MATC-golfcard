@@ -1,6 +1,4 @@
-angular.module('userControllers', [])
-
-.controller('regCtrl',['$scope','$http', function($scope, $http) {
+app.controller('regCtrl',['$scope','$http', function($scope, $http) {
   $scope.regdata = {};
   $scope.regUser = function(regData){
     console.log("form submitted");
