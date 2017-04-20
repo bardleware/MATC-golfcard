@@ -240,23 +240,35 @@ body, html {
 /*
     MAP CSS
 */
+.closerBar {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 20px;
+  color: #808080;
+  width: 350px;
+  margin: 0 auto; }
+
 .mapContainer {
   width: 350px;
   height: 400px;
-  border: 1px solid black;
+  border: 5px solid #808080;
   margin: 0 auto;
   opacity: 1; }
 
-.holeSelectorRow {
-  margin: 0 auto;
-  margin-top: 10px;
+.scrollerRow {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  width: 200px;
-  height: 100px;
-  padding-top: 5px;
-  justify-content: center; }
+  justify-content: flex-start;
+  width: 720px;
+  height: 40px;
+  padding-top: 3px;
+  background-color: #cccccc; }
+
+.holeSelectorRow {
+  margin: 0 auto;
+  overflow-x: scroll;
+  width: 350px;
+  height: 60px; }
 
 @media (min-width: 1165px) {
   body, html {
