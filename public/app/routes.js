@@ -33,8 +33,7 @@ app.config(function ($stateProvider, $locationProvider,$urlRouterProvider) {
       state: 'game',
       url: '/game',
       tmpUrl: 'app/views/pages/game.html',
-      ctrl: 'regCtrl',
-      controllerAs: 'reg'
+      //need a controller
     });
     createState({
       state: 'game.scorecard',
@@ -46,6 +45,8 @@ app.config(function ($stateProvider, $locationProvider,$urlRouterProvider) {
       state: 'game.map',
       url: '/map',
       tmpUrl: 'app/views/pages/game/map.html',
+      ctrl: 'mapCtrl',
+      controllerAs: 'map'
       //needa a controller
     });
     createState({

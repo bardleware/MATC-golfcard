@@ -241,10 +241,11 @@ body, html {
     MAP CSS
 */
 .mapContainer {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 400px;
   border: 1px solid black;
-  margin: 0 auto; }
+  margin: 0 auto;
+  opacity: 1; }
 
 .holeSelectorRow {
   margin: 0 auto;

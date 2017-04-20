@@ -1,10 +1,9 @@
-app.controller('regCtrl',['$scope','$http', function($scope, $http) {
-  $scope.regdata = {};
-  $scope.regUser = function(regData){
-    console.log("form submitted");
-    console.log(regData);
-    $http.post('/api/users',regData).then(function(data){
-      console.log(data);
-    })
-  }
-}])
+app.controller('mapCtrl', function($scope) {
+  var mapOptions = {
+        zoom: 4,
+        center: new google.maps.LatLng(40.0000, -98.0000),
+        mapTypeId: google.maps.MapTypeId.TERRAIN
+    }
+
+    $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+});
