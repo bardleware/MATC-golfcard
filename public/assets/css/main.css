@@ -269,6 +269,40 @@ body, html {
   width: 350px;
   height: 60px; }
 
+/*
+    ScoreBoard CSS
+*/
+.scoreBoardContainer {
+  width: 100%;
+  font-size: 30px; }
+
+.scoreBoardHeading {
+  font-size: 40px;
+  text-align: center;
+  color: #808080; }
+
+.closeButton {
+  font-size: 20px;
+  text-align: center;
+  color: #808080; }
+
+.scoreRow {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 40px; }
+
+.PlayerName {
+  width: 199px; }
+
+.PlayerScore {
+  width: 100px;
+  padding-left: 3px;
+  text-align: right;
+  border-left: 1px solid #808080; }
+
 @media (min-width: 1165px) {
   body, html {
     height: 100vh;

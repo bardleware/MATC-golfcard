@@ -4,7 +4,9 @@
 
     <div class="optionRow">
       <div class="leftSide">Players:</div>
-      <div class="rightSide">"dropdown"
+      <div class="rightSide">
+        <select ng-options="opt as opt.num for opt in setup.playerCount track by opt.id">
+        </select>
       </div>
     </div>
 

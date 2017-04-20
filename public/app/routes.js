@@ -26,7 +26,9 @@ app.config(function ($stateProvider, $locationProvider,$urlRouterProvider) {
     createState({
       state: 'setup',
       url: '/setup',
-      tmpUrl: 'app/views/pages/setup.html'
+      tmpUrl: 'app/views/pages/setup.html',
+      ctrl: 'setupCtrl',
+      controllerAs: 'setup'
     });
 
     createState({
