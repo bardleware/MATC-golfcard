@@ -1,0 +1,249 @@
+body, html {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url("https://s3-us-west-2.amazonaws.com/bardleware1/Golfer.png");
+  /*
+  Original Image src: https://static.pexels.com/photos/33478/golf-sunset-sport-golfer.png
+  */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  font-size: 16px; }
+
+#root {
+  margin: auto;
+  padding-top: 10px;
+  background-color: #ffffff;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%; }
+
+#uiViewContainer {
+  padding-top: 30px;
+  width: 90%;
+  height: 800px;
+  margin: 0 auto; }
+
+.appCardView {
+  height: 100%;
+  border-radius: 5px;
+  padding: 5px 15px 5px 10px;
+  width: 100%; }
+
+/*
+  Start Round Button
+*/
+.StartRound {
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+  background-color: green;
+  color: white;
+  font-size: 30px;
+  padding-top: 4px;
+  width: 235px;
+  height: 50px;
+  border-radius: 5px; }
+
+.gameChild {
+  margin: 0 auto;
+  width: 100%;
+  height: 80%;
+  margin-top: 20px; }
+
+/* Loading Block */
+.loading-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 150px;
+  height: 100px;
+  width: 100px;
+  background-color: #ffbf00;
+  border-radius: 5px;
+  font-size: 12pt; }
+
+#spinner {
+  font-size: 40pt; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.myNavBar {
+  width: 100%;
+  height: 30px;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.nav-btn-dev {
+  text-align: center;
+  padding-top: 5px;
+  width: 100px;
+  height: 30px;
+  background-color: green;
+  border-radius: 5px;
+  color: #fff;
+  margin: 0px 10px 0px 10px; }
+
+/* 
+  Setup CSS
+*/
+.gameSetup {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 20px; }
+
+.header {
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  font-weight: 900; }
+
+.optionRow {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  height: 30px;
+  margin-bottom: 10px; }
+
+.leftSide {
+  text-align: right;
+  padding-right: 3px;
+  padding-top: 3px;
+  width: 50%;
+  height: 100%; }
+
+.rightSide {
+  text-align: left;
+  padding-left: 3px;
+  padding-top: 3px;
+  width: 50%;
+  height: 100%; }
+
+.playerRow {
+  display: flex;
+  height: 60px;
+  width: 80%;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 10px; }
+
+.playerSeparator {
+  border-bottom: 1px solid #cccccc;
+  width: 20%;
+  margin: 0 auto; }
+
+.playerLabel {
+  font-weight: 900; }
+
+.subRow {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 50%; }
+
+.pName
+.handicap {
+  width: 100%;
+  height: 50%; }
+
+/*
+  golf Card
+*/
+.holeNumber {
+  width: 30px;
+  height: 30px;
+  background-image: url("https://s3-us-west-2.amazonaws.com/bardleware1/golf_ball_texture__by_lylejk-d3il10u.png");
+  background-size: cover;
+  background-repeat: repeat;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 900;
+  color: green;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 1px;
+  border: 1px solid #808080; }
+
+.col-item {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  padding-top: 5px;
+  border-bottom: 1px solid #cccccc; }
+
+.col-item-l {
+  width: 90%;
+  height: 30px;
+  margin: 0 auto;
+  padding-top: 5px;
+  border-bottom: 1px solid #cccccc;
+  font-weight: 900; }
+
+.col-item-hole {
+  width: 90%;
+  height: 30px;
+  margin: 0 auto;
+  padding-top: 5px;
+  font-weight: 900; }
+
+#scoreCard {
+  display: flex;
+  flex-direction: row;
+  height: 415px; }
+
+.leftScorecard {
+  width: 200px;
+  height: 100%; }
+
+.rightScorecard {
+  overflow-x: scroll;
+  padding-left: 5px;
+  width: 100%;
+  height: 100%; }
+
+.rightContent {
+  height: 370px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: row;
+  color: black; }
+
+.rightColumn {
+  margin: 0px 2px 0px 2px;
+  width: 40px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
+.leftColumn {
+  margin: 0px 2px 0px 2px;
+  width: 100%;
+  border-right: 1px solid #cccccc;
+  display: flex;
+  flex-direction: column;
+  text-align: right; }
+
+@media (min-width: 1165px) {
+  body, html {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url("https://s3-us-west-2.amazonaws.com/bardleware1/Golfer.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top; } }

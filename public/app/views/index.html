@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MEAN Stack Tutorial</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="https://unpkg.com/angular-ui-router@1.0.0-rc.1/release/angular-ui-router.js"></script>
+
+
+    <script src="app/app.js"></script>
+    <script src="app/routes.js"></script>
+    <script src="app/controllers/userCtrl.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS from Bootswatch -->
+    <link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- css from sass -->
+  </head>
+
+
+  <body ng-app="userApp">
+    <div id="root">
+      <!-- Fixed navbar -->
+
+      <div class="myNavBar">
+        <a ui-sref="loading">
+          <div class="nav-btn-dev">Loading</div>
+        </a>
+        <a ui-sref="setup">
+          <div class="nav-btn-dev">Setup</div>
+        </a>
+        <a ui-sref="game.scorecard">
+          <div class="nav-btn-dev">Game</div>
+        </a>
+      </div>
+
+      <div id="uiViewContainer">
+
+        <ui-view></ui-view>
+      </div>
+
+    </div>
+
+
+
+  </body>
+</html>
