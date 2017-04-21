@@ -38,7 +38,7 @@ body, html {
   margin: 0 auto;
   margin-top: 30px;
   text-align: center;
-  background-color: green;
+  background-color: #006600;
   color: white;
   font-size: 30px;
   padding-top: 4px;
@@ -88,7 +88,7 @@ body, html {
   padding-top: 5px;
   width: 100px;
   height: 30px;
-  background-color: green;
+  background-color: #006600;
   border-radius: 5px;
   color: #fff;
   margin: 0px 10px 0px 10px; }
@@ -116,11 +116,21 @@ body, html {
   height: 30px;
   margin-bottom: 10px; }
 
+.addPlayer {
+  background-color: #006600;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px;
+  width: 235px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px; }
+
 .leftSide {
   text-align: right;
   padding-right: 3px;
   padding-top: 3px;
-  width: 50%;
+  width: 29%;
   height: 100%; }
 
 .rightSide {
@@ -138,25 +148,40 @@ body, html {
   margin: 0 auto;
   margin-bottom: 10px; }
 
-.playerSeparator {
-  border-bottom: 1px solid #cccccc;
-  width: 20%;
-  margin: 0 auto; }
-
 .playerLabel {
-  font-weight: 900; }
+  font-weight: 900;
+  width: 45%;
+  text-align: right;
+  padding-right: 5px; }
+
+.inputPlayerName {
+  display: flex;
+  flex-direction: row;
+  width: 55%;
+  font-size: 24px; }
 
 .subRow {
   display: flex;
   flex-direction: row;
   margin-bottom: 0px;
   width: 100%;
-  height: 50%; }
+  height: 100%; }
 
-.pName
-.handicap {
-  width: 100%;
-  height: 50%; }
+.playerInput {
+  border: none;
+  border-bottom: 2px solid #006600;
+  width: 150px;
+  height: 28px;
+  background-color: #f2f2f2;
+  color: #808080; }
+
+.removePlayer {
+  margin-left: 3px;
+  height: 28px;
+  width: 28px;
+  font-size: 28px;
+  color: red;
+  text-align: center; }
 
 /*
   golf Card
@@ -170,7 +195,7 @@ body, html {
   border-radius: 50%;
   font-size: 20px;
   font-weight: 900;
-  color: green;
+  color: #006600;
   text-align: center;
   margin: 0 auto;
   padding-top: 1px;
@@ -283,8 +308,9 @@ body, html {
 
 .closeButton {
   font-size: 20px;
-  text-align: center;
-  color: #808080; }
+  text-align: right;
+  color: #808080;
+  padding-right: 8px; }
 
 .scoreRow {
   display: flex;

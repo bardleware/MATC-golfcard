@@ -2,27 +2,31 @@
   <div class="gameSetup">
     <div class="header">Round Setup</div>
 
-    <div class="optionRow">
-      <div class="leftSide">Players:</div>
-      <div class="rightSide">
-        <select ng-options="opt as opt.num for opt in setup.playerCount track by opt.id">
-        </select>
-      </div>
-    </div>
 
 
     <div class="optionRow">
       <div class="leftSide">Course:</div>
-      <div class="rightSide">"dropdown"</div>
+      <div class="rightSide">
+        <select ng-options="opt as opt.name for opt in setup.courses track by opt.id" ng-model="setup.selectedCourse">
+        </select>
+      </div>
       <!-- there will be an ng-select to populate the dropdown -->
     </div>
 
-    <div class="playerRow">
+    <div class="optionRow">
+      <div class="addPlayer" ng-click="setup.player.add()">
+        <i class="fa fa-plus" aria-hidden="true"></i> ADD Player
+      </div>
+    </div>
+
+    <div class="playerRow" ng-repeat="player in setup.playerList track by $index">
       <!-- this will be ng-repeat for the number of players that they choose above -->
-      <hr class="playerSeparator">
       <div class="subRow">
-        <div class="leftSide playerLabel">Player 1</div>
-        <div class="rightSide">"Text boxt"</div>
+        <div class="playerLabel">Player {{$index + 1 }}</div>
+        <div class="inputPlayerName">
+          <input class="playerInput" type="text" name="playerName" ng-model="player.name">
+          <div class="removePlayer" ng-click="setup.player.remove($index)"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+        </div>
       </div>
 
     </div>
@@ -35,7 +39,7 @@
 
 
   <div class="ButtonRow">
-    <div class="StartRound">
+    <div class="StartRound" ng-click="setup.startRound()">
       Start Round
     </div>
 

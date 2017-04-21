@@ -20,7 +20,9 @@ app.config(function ($stateProvider, $locationProvider,$urlRouterProvider) {
     createState({
       state: 'loading',
       url: '/',
-      tmpUrl: 'app/views/pages/loading.html'
+      tmpUrl: 'app/views/pages/loading.html',
+      ctrl: 'mainCtrl',
+      controllerAs: 'main'
     });
 
     createState({
