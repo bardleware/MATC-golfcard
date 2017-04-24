@@ -4,14 +4,12 @@
 
 
 
-    <div class="optionRow">
-      <div class="leftSide">Course:</div>
-      <div class="rightSide">
+      <div class="header header-2">Course:</div>
+      <div class="optionRow row-center-text">
         <select ng-options="opt as opt.name for opt in setup.courses track by opt.id" ng-model="setup.selectedCourse">
         </select>
       </div>
       <!-- there will be an ng-select to populate the dropdown -->
-    </div>
 
     <div class="optionRow">
       <div class="addPlayer" ng-click="setup.player.add()">

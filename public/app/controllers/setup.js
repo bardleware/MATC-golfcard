@@ -10,7 +10,7 @@ app.controller('setupCtrl', ['$scope', '$state', 'game', function ($scope, $stat
     {
       name: ""
     }
-  ] 
+  ]
 
   setup.player = {
     add: function () {
@@ -31,8 +31,24 @@ app.controller('setupCtrl', ['$scope', '$state', 'game', function ($scope, $stat
   }
 
 
-
-
+  //this function validates that each player is unique
+  function arePlayersUnique(arr) {
+    var count = 0;
+    var currentNode;
+    for (var k = 0; k < arr.length; k++) {
+      currentNode = arr[k].name;
+      console.log(arr);
+      for (var j = 0; j < arr.length; j++) {
+        console.log(arr[j].name);
+        console.log(currentNode);
+        if (arr[j].name == currentNode && j !== k) {
+          count++;
+        }
+      }
+    }
+    console.log(count);
+    return count;
+  }
 
 
 
@@ -41,23 +57,26 @@ app.controller('setupCtrl', ['$scope', '$state', 'game', function ($scope, $stat
   setup.startRound = function () {
     var truthCounter = 0;
     var players = [];
+    var uniqueNames = [];
     var setupData = {
-      selectedCourse: setup.selectedCourse, 
+      selectedCourse: setup.selectedCourse,
       players: setup.playerList
     }
-    setup.playerList.forEach(function (obj) {
+    setupData.players.forEach(function (obj) {
       if (obj.name) {
         truthCounter++;
       }
     });
 
+    ;
+
+
     if (truthCounter === setup.playerList.length) {
-      game.getSetupData(setupData);
-
-
-      $state.go('loading');
-      
-
+      if (!arePlayersUnique(setup.playerList)) {
+        game.getSetupData(setupData);
+      } else {
+        alert("Each player name should be unique");
+      }
     } else {
       alert("All the player names need to be filled in");
     }

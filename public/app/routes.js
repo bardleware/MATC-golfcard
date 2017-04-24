@@ -43,7 +43,8 @@ app.config(function ($stateProvider, $locationProvider,$urlRouterProvider) {
       state: 'game.scorecard',
       url: '/scorecard',
       tmpUrl: 'app/views/pages/game/scorecard.html',
-      //needa a controller
+      ctrl: 'scorecard',
+      controllerAs: 'card'
     });
     createState({
       state: 'game.map',
@@ -57,7 +58,8 @@ app.config(function ($stateProvider, $locationProvider,$urlRouterProvider) {
       state: 'game.scoreboard',
       url: '/scoreboard',
       tmpUrl: 'app/views/pages/game/score.html',
-      //needa a controller
+      ctrl: 'scoreboard',
+      controllerAs: 'score'
     });
 
     $urlRouterProvider.otherwise('/');

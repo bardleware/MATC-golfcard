@@ -137,13 +137,24 @@ body, html {
     font-weight: 900;
   }
 
+  .dropdown{
+    font-size: 14px;
+    border: 1px solid $lightGrey;
+  }
+
+  .header-2{
+    font-size: 18px;
+  }
+
 .optionRow{
   width: 80%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin: 0 auto;
   height: 30px;
   margin-bottom: 10px;
+  text-align: center;
 
 }
 
@@ -158,21 +169,6 @@ body, html {
   font-size: 18px;
 }
 
-.leftSide {
-  text-align: right;
-  padding-right: 3px;
-  padding-top: 3px;
-  width: 29%;
-  height: 100%
-  }
-
-.rightSide {
-  text-align: left;
-  padding-left: 3px;
-  padding-top: 3px;
-  width: 50%;
-  height: 100%; 
-  }
 
 .playerRow{
   display: flex;
@@ -277,7 +273,8 @@ body, html {
 #scoreCard{
   display: flex;
   flex-direction: row;
-  height: 415px;
+  height: 450px;
+  font-size: 24px;
 }
 
 .leftScorecard{
@@ -301,10 +298,36 @@ body, html {
 }
 .rightColumn{
   margin: 0px 2px 0px 2px;
-  width: 40px;
+  width: 52px;
   height: 370px;
   display:flex;
   flex-direction: column;
+  text-align: center;
+}
+
+  .scorecardCol{
+       margin: 0px 7px 2px 7px;
+    border-bottom: 1px solid $lightGrey;
+    width: 48px;
+    height: 35px;
+    }
+
+
+    .labelCol{
+    padding-top: 3px;
+    padding-right: 4px;
+    }
+
+    .scoreInput{
+      width: 48px;
+      font-size: 23px;
+      border: 1px solid $lightGrey;
+      background-color: $offWhite;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+.instructions{
   text-align: center;
 }
 .leftColumn{
@@ -410,4 +433,14 @@ body, html {
     background-position: center top;
   }
 
+   .dropdown{
+    font-size: 20px;
+  }
+
+  .scorecardCol{
+       margin: 0px 7px 2px 7px;
+    border-bottom: 1px solid $lightGrey;
+    width: 48px;
+    height: 37px;
+    }
 }

@@ -1,83 +1,37 @@
 <div class="gameChild">
-  <div class="closeButton">
+  <div class="closeButton" ng-click="card.seeScoreboard()">
     <i class="fa fa-window-maximize" aria-hidden="true"></i> Score Board
   </div>
 
+  <div class="instructions">
+    Click on the Tee-Type Yards for a Map
+  </div>
   <div id="scoreCard">
     <div class="leftScorecard">
-    <div class="leftColumn">
+      <div class="leftColumn">
+        <div class="labelCol" ng-repeat="row in card.titleCol">
+          {{ row.label }}
+        </div>
 
-      <div class="col-item-hole">
-        Hole
       </div>
-
-      <div class="teeYards col-item-l">
-        <!-- I need to implement some kind of ng-repeat here for tee types that styles this as well-->
-        Tee Yards
-      </div>
-
-      <div class="HadicapRow col-item-l">
-        Handicap
-      </div>
-
-      <div class="parRow col-item-l">
-        Par
-      </div>
-
-      <div class="playerScore col-item-l">
-        Player 1
-      </div>
-      <div class="playerScore col-item-l">
-        Player 2
-      </div>
-      <div class="playerScore col-item-l">
-        Player 3
-      </div>
-      <div class="playerScore col-item-l">
-        Player 4
-      </div>
-
     </div>
-  </div>
+    
 
+    <div class="rightScorecard">
+      <div class="rightContent">
 
-  <div class="rightScorecard">
-    <div class="rightContent">
+        <!-- this is what will be repeated for each column-->
+        <div class="rightColumn" ng-repeat="col in card.scorecard">
 
-      <!-- this is what will be repeated for each column-->
-      <div class="rightColumn">
+          <div class="scorecardCol" ng-repeat="row in col.arrRow" >
+            {{row.num}}
+          </div>
 
-        <div class="holeNumber">
-          1
-        </div>
-
-        <div class="teeYards col-item">
-          <!-- I need to implement some kind of ng-repeat here for tee types that styles this as well-->
-          300
-        </div>
-
-        <div class="HadicapRow col-item">
-          2
-        </div>
-
-        <div class="parRow col-item">
-          1
-        </div>
-
-        <div class="playerScore col-item">
-          0
-        </div>
-        <div class="playerScore col-item">
-          0
-        </div>
-        <div class="playerScore col-item">
-          0
-        </div>
-        <div class="playerScore col-item">
-          0
+          <div class="scorecardCol" ng-repeat="score in col.scoreArr">
+            <input class="scoreInput" type="text" ng-value="0" ng-model="score.score" ng-change="card.updateScore(score.index, score.score, score.hole)">
+          </div>
         </div>
       </div>
-  </div>
 
 
 
@@ -92,3 +46,33 @@
     18
   </div>-->
 </div>
+<!--
+          <div class="holeNumber">
+            1
+          </div>
+
+          <div class="teeYards col-item">
+           
+            300
+          </div>
+
+          <div class="HadicapRow col-item">
+            2
+          </div>
+
+          <div class="parRow col-item">
+            1
+          </div>
+
+          <div class="playerScore col-item">
+            <input class="scoreInput" type="text" name="playerName" ng-model="player.name">
+          </div>
+          <div class="playerScore col-item">
+            <input class="playerInput" type="text" name="playerName" ng-model="player.name">
+          </div>
+          <div class="playerScore col-item">
+            <input class="playerInput" type="text" name="playerName" ng-model="player.name">
+          </div>
+          <div class="playerScore col-item">
+            <input class="playerInput" type="text" name="playerName" ng-model="player.name">
+          </div>-->
