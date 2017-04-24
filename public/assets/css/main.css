@@ -329,6 +329,9 @@ body, html {
   color: #808080;
   padding-right: 8px; }
 
+.closeButton:hover {
+  cursor: pointer; }
+
 .scoreRow {
   display: flex;
   flex-direction: row;

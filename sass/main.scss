@@ -396,6 +396,10 @@ body, html {
   text-align: right;
   color: $superGrey;
   padding-right: 8px;
+  
+}
+.closeButton:hover{
+  cursor: pointer;
 }
 .scoreRow{
   display: flex;

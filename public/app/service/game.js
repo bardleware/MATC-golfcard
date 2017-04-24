@@ -3,6 +3,7 @@ app.service('game', ['$http', '$state', function ($http, $state) {
   var setupGame = 'setupGame';
   var loadGameData = 'loadGameData';
   var buildScoreCard = 'buildScoreCard';
+  var inGame = 'inGame';
   game.numberOfPlayers = 1;
   game.userLocation;
   game.courseList;
@@ -13,7 +14,8 @@ app.service('game', ['$http', '$state', function ($http, $state) {
     players: [],
     course: {},
     scorecard: [],
-    titleCol: []
+    titleCol: [],
+    coursePar: 0
   };
 
   game.getSetupData = function (obj) {
@@ -34,7 +36,7 @@ app.service('game', ['$http', '$state', function ($http, $state) {
   }
 
   game.state = setupGame;
-  // possible states 'loadGameData', 'setupGame'
+  // possible states 'loadGameData', 'setupGame', 'buildScoreCard', 'inGame'
 
   function updateGameState(newState) {
     game.state = newState;
@@ -56,7 +58,7 @@ app.service('game', ['$http', '$state', function ($http, $state) {
   function orderPlayersByScore() {
     game.orderedPlayers = game.gameData.players;
 
-    game.orderedPlayers.sort(function(a,b){
+    game.orderedPlayers.sort(function (a, b) {
       return a.totalScore - b.totalScore;
     })
   }
@@ -112,9 +114,6 @@ app.service('game', ['$http', '$state', function ($http, $state) {
       var course = game.gameData.course;
       var players = game.gameData.players;
 
-      console.log("inside createScorecard");
-
-
       //this block creates the label column on the left side of the score card.
       game.gameData.titleCol.push({ label: "Hole" }); //creates the Hole label
       course.holes[0].tee_boxes.forEach(function (obj) {
@@ -134,6 +133,10 @@ app.service('game', ['$http', '$state', function ($http, $state) {
       function createScorecard(i) {
         var arrRow = [];
         var scoreArr = [];
+
+        game.gameData.coursePar += game.gameData.course.holes[i].tee_boxes[0].par;
+        console.log(game.gameData.coursePar);
+
         arrRow.push(
           {
             num: game.gameData.course.holes[i].hole_num,
@@ -168,7 +171,7 @@ app.service('game', ['$http', '$state', function ($http, $state) {
             index: index,
             score: 0
           });
-          
+
           game.gameData.players[index].scores.push(0)
         })
 
@@ -183,6 +186,8 @@ app.service('game', ['$http', '$state', function ($http, $state) {
       }
     })
     console.log(game.gameData.players);
+    updateGameState(inGame);
+    $state.go('game.scorecard');
   }
 
   function getLocation() {

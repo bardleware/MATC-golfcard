@@ -1,12 +1,12 @@
 app.controller('scoreboard',['$scope', 'game', '$state', function($scope, game, $state){
   var score = this;
-  scores.orderedPlayers = game.gameData.players.map(function(obj){
+  score.orderedPlayers = game.gameData.players.map(function(obj){
     return{
       name: obj.name,
-      score: obj.totalScore
+      score: game.gameData.coursePar - obj.totalScore
     }
   })
-  scores.seeScorecard = function(){
+  score.seeScorecard = function(){
     $state.go('game.scorecard');
   }
 
